@@ -4,13 +4,14 @@ version = "0.1.0"
 description = "Finding birds with lightning flash"
 authors = ["Alexandre Strube <surak@surak.eti.br>"]
 readme = "README.md"
-packages = [{include = "landing-strips"}]
+packages = [{include = "bird"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 stackprinter = "^0.2.10"
 python-dotenv = "^1.0.0"
 requests = "^2.30.0"
+urllib3 = "1.26.16"
 
 [tool.poetry.scripts]
 bird = "bird.bird:main"
