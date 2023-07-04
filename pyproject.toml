@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "bird"
+version = "0.1.0"
+description = "Finding birds with lightning flash"
+authors = ["Alexandre Strube <surak@surak.eti.br>"]
+readme = "README.md"
+packages = [{include = "landing-strips"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+stackprinter = "^0.2.10"
+python-dotenv = "^1.0.0"
+requests = "^2.30.0"
+
+[tool.poetry.scripts]
+bird = "bird.bird:main"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.1"
+pytest = "^7.3.1"
+coverage = "^7.2.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+omit = [".*", "*/site-packages/*"]
+[tool.coverage.report]
+fail_under = 100
